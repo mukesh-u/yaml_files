@@ -1,0 +1,47 @@
+environment: hbx.media.net
+cookies: [VisitorId : "295a8052-83a4-4bc7-06bd-b840f17d88f7" ,  data-o : "295a8052-83a4-4bc7-06bd-b840f17d88f7"]
+userAgent: Chrome.Desktop.Mac
+publisherUrl: "https://www.investorshangout.com/?mnet_test=1"
+
+networkCallsPositive: {
+    belog: "https://hblg.media.net/log?logid=belog",
+    checksync: "https://hbx.media.net/checksync.php",
+    PRLog: "https://hblg.media.net/log?logid=kfk&evtid=hbpr",
+    APLog: "https://hblg.media.net/log?logid=kfk&evtid=hbap",
+    AWLog: "https://hblg.media.net/log?logid=kfk&evtid=hbaw",
+
+ }
+
+networkCallsNegative: {
+  nerrPing: "https://hblg.media.net/nerrping.php?",
+  Flog: "https://hblg.media.net/log?logid=kfk&evtid=flog",
+  
+ }
+
+keysToVerifyPositive: {
+
+  PRLog: {
+ 
+    svr: ["2023072110_141_080112_702_080112_665_ssp"],
+ 
+  },
+  
+  APLog: {
+    svr: ["2023072110_141_080112_702_080112_665_ssp"],
+ 
+  },
+ }
+
+#to_check_negative_keys
+keysToVerifyNegative: {
+
+ }
+
+#to_check_any_keys_among_these
+keysToVerifyAnyOneOf: {
+
+ }
+
+ # ------------------------------ignore the lines below--rats---------------------
+responseSimulate: []
+domInject: []

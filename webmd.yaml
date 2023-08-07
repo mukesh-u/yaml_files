@@ -1,0 +1,66 @@
+environment: abhijeet-ko.hbistage.srv.media.net
+cookies: [VisitorId : "295a8052-83a4-4bc7-06bd-b840f17d88f7" ,  data-o : "295a8052-83a4-4bc7-06bd-b840f17d88f7"]
+userAgent: Firefox.Desktop.Mac
+publisherUrl: "https://www.webmd.com/covid/coronavirus-incubation-period#1?mnet_test=1&force_hbtest=all"
+
+networkCallsPositive: {
+      PRLog: "https://hblg.media.net/log?logid=prlog",
+      APLog: "https://hblg.media.net/log?logid=aplog",
+      AWLog: "https://hblg.media.net/log?logid=awlog",
+      RTBSCall: "https://xch.media.net/AdExchange/rtbsspub?",
+      checksync: "https://hbx.media.net/checksync.php?cid=8CU66J63J",
+      hb: "https://hb-pb.media.net/rtb/hb?cid=8CU66J63J",
+      ucreative: "https://hbx.media.net/__media__/js/ucreative.js?cv=1",
+      tcb: "https://contextual.media.net/tcb.js?",
+      belog: "https://hblg.media.net/log?logid=kfk&evtid=belog",
+      # GAMAPADCall: "https://securepubads.g.doubleclick.net/gampad/ads?",
+ }
+
+networkCallsNegative: {
+  nerrPing: "https://hblg.media.net/nerrping.php?",
+  Flog: "https://hblg.media.net/log?logid=kfk&evtid=flog",
+ }
+
+keysToVerifyPositive: {
+
+  checksync: {
+    gdpr: ["0"],
+    gdprconsent: ["0"],
+  },
+
+  RTBSCall: {
+    gdpr: ["0"],
+    gdprconsent: ["0"],
+  },
+
+  PRLog: {
+    pvid: ["99", "23", "79", "29", "3012", "251", "450", "441", "178", "3", "345", "203", "126", "237", "326", "117", "107", "327", "208", "109", "96", "97", "54"],
+    svr: ["2023072110_141_080214_705_080214_668_ssp"],
+    ugd: ["4"],
+  #usp_ldf: ["0","1"],
+   },
+
+  APLog: {
+    svr: ["2023072110_141_080214_705_080214_668_ssp"],
+    ugd: ["4"],
+  #usp_ldf: ["0","1"],
+   },
+ }
+
+#to_check_negative_keys
+keysToVerifyNegative: {
+  belog: { name: ["ADS_DISABLED"]},
+  prlog: { snm : ["removed","error",], nbr : ["13"], usp_ldf : []},
+  aplog: { nbr: ["13"]},
+  awlog: { ogbdp : ["0","-1","-2"]},
+ }
+
+#to_check_any_keys_among_these
+keysToVerifyAnyOneOf: {
+  prlog: { nbr : [ "45","3","69","0","1","99" ]},
+  aplog: { cid: ["8CULM0U5B", "8CU66J6"], snm: ["success", "nobid"], nbr : [ "45","3","69","0","1","99" ]},
+ }
+
+# ------------------------------ignore the lines below--rats---------------------
+responseSimulate: []
+domInject: []

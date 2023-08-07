@@ -1,0 +1,74 @@
+environment: hbx.media.net
+cookies: [VisitorId : "295a8052-83a4-4bc7-06bd-b840f17d88f7" ,  data-o : "295a8052-83a4-4bc7-06bd-b840f17d88f7"]
+userAgent: Chrome.Desktop.Mac
+publisherUrl: "https://playbill.com/?mnet_test=1&force_hbtest=all"
+
+networkCallsPositive: {
+  PRLog: "https://hblg.media.net/log?logid=prlog",
+  APLog: "https://hblg.media.net/log?logid=aplog",
+  AWLog: "https://hblg.media.net/log?logid=awlog",
+  RTBSCall: "https://xch.media.net/AdExchange/rtbsspub?",
+  GAMAPADCall: "https://securepubads.g.doubleclick.net/gampad/ads?",
+  ucreative: "https://hbx.media.net/__media__/js/ucreative.js?cv=1",
+  tcb: "https://contextual.media.net/tcb.js?",
+  checksync: "https://hbx.media.net/checksync.php?cid=8CUD4A51B",
+  l1: "https://lg1.hb.yahoo.net/log?logid=kfk",
+  ADPLog: "https://lg1.hb.yahoo.net/log?logid=kfk&evtid=adplog"
+ }
+
+networkCallsNegative: {
+  nerrPing: "https://hblg.media.net/nerrping.php?",
+  Flog: "https://hblg.media.net/log?logid=kfk&evtid=flog",
+  BELog: "https://lg1.hb.yahoo.net/log?logid=kfk&evtid=belog"
+ }
+
+keysToVerifyPositive: {
+
+  RTBSCall: {
+    cid: ["8CUD4A51B"],
+    ugd: ["4"],
+    requrl: ["https%3A%2F%2Fplaybill.com%2F%3Fmnet_test%3D1%26force_hbtest%3Dall"],
+    itype: ["HB"],
+  },
+
+  checksync: {
+    gpp: [],
+    gpp_sid: [],
+  },
+
+  PRLog: {
+    cid: ["8CUD4A51B"],
+    svr: ["2023072110_141_080112_702_080112_665_ssp"],
+    ugd: ["4"],
+  },
+
+  APLog: {
+    svr: ["2023072110_141_080112_702_080112_665_ssp"],
+    ugd: ["4"],
+    adtypes : ["0"],
+    dapp : ["green"],
+  }
+ }
+keysToVerifyNegative: {
+  PRLog: { snm : ["removed","error"], nbr : ["13","45"], cid: ["8CUD4A51B"]},
+  APLog: { nbr: ["45"],},
+  AWLog: { ogbdp : ["0","-1","-2"]},
+  BELog: { name : ["DFS_PERF","NO_DOMINANT_BID_ERROR","DFST","ADS_DISABLED"]}
+ }
+
+keysToVerifyAnyOneOf: {
+   RTBSCall: { crid : [ "568638967","707132083","748714464","895260849","938316371" ]},
+   PRLog: { pvid: ["222","236","237","80","229","97","122","251","55","203","3007","108","3012" ]},
+   APLog: { pvid: ["222","236","237","80","229","97","122","251","55","203","3007","108","3012" ],
+   nbr: ["45","69","3","66"],
+   res_mtype: ["0","1","2"],
+   snm: ["success","nobid","nobid_after_auction"],
+   adType: ["BANNER","NATIVE","VIDEO"],
+   size: ["728x90","160x600 ","300x250 ","300x600 "]},
+   ADPLog: { evttyp: ["1","2","3"]} 
+ } 
+ 
+
+ # ------------------------------ignore the lines below--rats---------------------
+responseSimulate: []
+domInject: []

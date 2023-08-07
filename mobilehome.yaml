@@ -1,0 +1,62 @@
+environment: hbx-stage.media.net
+cookies: [visitor-id : 3332729872710600062V10 ,  data-o : f88043f8-7631-0195-18cf-d9b1ff3a7344~~1]
+userAgent: Chrome.Mobile.iPhone
+publisherUrl: "https://www.mobilehome.net?mnet_test=1"
+
+networkCallsPositive: {
+ aplogs: "https://hblg.media.net/log?logid=aplog",
+ prlogs: "https://hblg.media.net/log?logid=prlog",
+ awlogs: "https://hblg.media.net/log?logid=awlog",
+ #checksync: "https://hbx.media.net/checksync.php",
+ gampad: "https://securepubads.g.doubleclick.net/gampad/ads",
+ ucreative: "https://hbx.media.net/__media__/js/ucreative.js",
+}
+
+networkCallsNegative: {
+ nerrPing: "https://hblg.media.net/nerrping.php",
+ flog: "https://hblg.media.net/log?logid=kfk&evtid=flog",
+ checksync: "https://hbx.media.net/checksync.php",
+}
+
+keysToVerifyPositive: {
+  prlogs: {
+    pvid: ["326","2222"],
+    cid: ["8CU66J63J"]
+    }, #//PR logs doesnt fire on mobilehome.net
+  aplogs: {
+    pvid: ["0","222","237","214","203","97","251","175"],
+    ugd: ["4"],
+    adt: ["desktop"],
+    itype: ["HB"],
+    cid: ["8CU243656"],
+    res_mtype : ["BANNER", "NATIVE", "VIDEO"],
+    crid : ["914241255", "551112767"],
+    aer: ["1", "2"],
+    cpm : [<1],~
+    }
+ }
+
+
+keysToVerifyNegative: {
+aplogs: {
+  nob: [""],
+  adtypes: [NULL],
+  actltime: [NULL],
+  ltime: [NULL],
+  cpm: [-1],
+  dfpBd: [NULL],
+  nbr: ["13"],
+  size: [NULL],
+ }
+}
+
+#to_check_any_keys_among_these
+keysToVerifyAnyOneOf: {
+    prlog: { nbr : [ -1,-2 ]},
+    aplog: { nbr : [  ]},
+ }
+
+
+# ------------------------------ignore the lines below--rats---------------------
+responseSimulate: []
+domInject: []
